@@ -1,50 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
 }
-
-/* 
-font-family: 'Open Sans', sans-serif;
-font-family: 'Montserrat', sans-serif; 
-*/
-html{
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6rem;
-}
-
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Montserrat', sans-serif;
-}
-
-h1{
-  font-size: 6rem;
-}
-
-h2{
-  font-size: 5.5rem;
-}
-
-h3{
-  font-size: 5rem;
-}
-
-h4{
-  font-size: 4.5rem;
-}
-
-h5{
-  font-size: 4;
-}
-
-h6{
-  font-size: 3.8;
-}
-
 .img-logo{
   margin-top: 1.2rem;
   width: 7rem;
@@ -53,39 +14,13 @@ h6{
 .header-logo{
   width: 40.34rem;
 }
-.main-content{
-  max-width: 120rem;
-  margin: 3rem auto;
-}
-
-.section{
-  min-height: 100vh;
-}
-
-.main-bg{
-  background-image: url('../img/main-bg2.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.white-bg{
-  background-color: white;
-}
-
-.menu{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
 
 .menu-content{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 2rem;
+  height: 8rem;
 }
 
 nav ul{
@@ -96,21 +31,134 @@ nav ul{
 nav ul li a{
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 1.5rem;
   text-transform: uppercase;
-  color: white;
+  color: rgb(224, 22, 99);
+  border-radius: 0.5rem;
+  position: relative;
 }
 
-.main-header{
-  margin: 0 auto; 
-  padding: 10rem 4rem 11rem 4rem;
+.menu ul li a::after{
+  position: absolute;
+  content: '';
+  background: rgb(224, 22, 99);
+  bottom: 1rem;
+  left: 50%;
+  height: 0.2rem;
+  width: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+  width: 50%;
+  left: 25%;
+}
+
+.menu-spacing{
+  width: 100%;
+  height: 8rem;
+}
+
+.intro-content{
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 5rem
+  position: relative;
+  top: -5rem;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  height: 100vh;
 }
 
-.main-header-content{
-  max-width: 120rem;
+.intro-text-content, .intro-img{
   color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.intro-text-content h2{
   text-transform: uppercase;
+  font-size: 6rem;
+  margin-bottom: 5rem;
+}
+
+.intro-text-content p{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+.intro-img img{
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}
+
+.torneio-content{
+  max-width: 70rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.torneio-content h2{
+  text-transform: uppercase;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  color: rgb(224, 22, 99);
+}
+
+.torneio-content p{
+  color: rgb(129, 6, 53);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.adm-content{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+.header-section h2{
+  margin-bottom: 2rem;
+}
+
+.header-section p{
+  margin-bottom: 3rem;
+}
+
+.card-section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  counter-reset: card-counter;
+}
+
+article{
+  width: 100%;
+}
+
+.adm-content article > h3{
+  position: relative;
+  margin: 2rem 0 2rem 7rem;
+  display: flex;
+  align-items: center;
+}
+
+.adm-content article > h3::before {
+  counter-increment: card-counter;
+  content: counter(card-counter);
+  position: absolute;
+  font-size: 8rem;
+  left: -7rem;
+  transform: rotate(5deg);
+  font-style: italic;
 }
