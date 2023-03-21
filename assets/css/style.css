@@ -67,11 +67,10 @@ nav ul li a{
   align-items: center;
   grid-template-columns: 1fr 1.5fr;
   gap: 5rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .intro-text-content, .intro-img{
-  color: white;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -81,9 +80,11 @@ nav ul li a{
   text-transform: uppercase;
   font-size: 6rem;
   margin-bottom: 5rem;
+  color: white;
 }
 
 .intro-text-content p{
+  color: white;
   text-transform: uppercase;
   font-size: 1.4rem;
   text-align: justify;
@@ -101,7 +102,7 @@ nav ul li a{
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .torneio-content h2{
@@ -121,10 +122,10 @@ nav ul li a{
 
 .adm-content{
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
-  height: 100vh;
-  color: white;
+  min-height: 100vh;
+  
 }
 
 .header-section h2{
@@ -153,6 +154,9 @@ article{
   align-items: center;
 }
 
+.adm-content h2,h3,p{
+  color: white;
+}
 .adm-content article > h3::before {
   counter-increment: card-counter;
   content: counter(card-counter);
@@ -161,4 +165,43 @@ article{
   left: -7rem;
   transform: rotate(5deg);
   font-style: italic;
+}
+
+.gallery-content{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.title-gallery{
+  color: rgb(224, 22, 99);
+  text-transform: uppercase;
+}
+
+.obs{
+  color: rgb(129, 6, 53);
+  text-align: center;
+}
+
+.gallery-section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  height: 100vh;
+}
+
+.gallery-section img{
+  width: 100%;
+  max-width: 36rem;
+  max-height: 36rem;
+  overflow: hidden;
+}
+
+.gallery-img img{
+  transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+  transform: translate(-1%, 1%) scale(1.2) rotate(2deg);
 }
