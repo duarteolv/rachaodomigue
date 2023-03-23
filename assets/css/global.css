@@ -68,6 +68,17 @@ h6{
   background-position: center;
 }
 
+.main-bg3{
+  background-image: url('../img/main-bg7.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .white-bg{
   background-color: white;
+}
+
+body .full-width{
+  width: 100%;
+  flex: 1 1 100%;
 }
