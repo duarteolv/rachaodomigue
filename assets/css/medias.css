@@ -1,0 +1,196 @@
+@media (max-width:800px){
+    .intro-content,
+    .card-section,
+    .gallery-section,
+    .contact-cotent{
+        grid-template-columns: 1fr;
+    }
+    .gallery-content{
+        display: block;
+    }
+
+    .gallery-img img{
+        transition: all 300ms ease-in-out;
+    }
+
+    .gallery-section img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+
+    }
+    
+    .contact-img img{
+        order: 1;
+        display: none;
+    }
+
+    .menu{
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+
+    .menu ul li a::after{
+        display: none;
+      }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content{
+        height: 100vh;
+    }
+
+    nav ul li a{
+        display: flex;
+        margin: 2rem 0;
+        justify-content: center;
+        height: 2rem;
+        align-items: center;
+    }
+
+    .close-menu-label::after{
+        position: fixed;
+        content: '☰';
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: rgb(129, 6, 53);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        font-size: 2rem;
+      }
+      
+      .close-menu:checked~.menu{
+        display: block;
+      }
+      
+      .close-menu:checked~.close-menu-label::after{
+        content: '✕';
+      }
+
+      .menu-spacing{
+        display: none;
+      }
+
+      .img-logo{
+        margin-bottom: 4rem;
+      }
+}
+
+@media (max-width:400px){
+  .intro-content,
+  .card-section,
+  .gallery-section,
+  .contact-cotent{
+      grid-template-columns: 1fr;
+  }
+  .gallery-content{
+      display: block;
+  }
+
+  .gallery-content h2{
+    font-size: 4rem;
+  }
+  .gallery-content h2, p{
+    text-align: center;
+  }
+  .gallery-img img{
+      transition: all 300ms ease-in-out;
+  }
+
+  .gallery-section img{
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+
+  }
+  
+  .contact-img img{
+      order: 1;
+      display: none;
+  }
+
+  .menu{
+      bottom: 0;
+      text-align: center;
+      display: none;
+  }
+
+
+  .menu ul li a::after{
+      display: none;
+    }
+
+  .menu-content, .menu-content ul{
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .menu-content{
+      height: 100vh;
+  }
+
+  nav ul li a{
+      display: flex;
+      margin: 2rem 0;
+      justify-content: center;
+      height: 2rem;
+      align-items: center;
+  }
+  .torneio-content{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-section h3{
+    font-size: 3rem;
+  }
+
+  .card-section p{
+    text-align: center;
+    font-size: 2rem;
+  }
+  .torneio-content h2{
+    font-size: 4rem;
+  }
+  .close-menu-label::after{
+      position: fixed;
+      content: '☰';
+      z-index: 2;
+      top: 2rem;
+      right: 2rem;
+      background-color: rgb(129, 6, 53);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    
+    .close-menu:checked~.menu{
+      display: block;
+    }
+    
+    .close-menu:checked~.close-menu-label::after{
+      content: '✕';
+    }
+
+    .menu-spacing{
+      display: none;
+    }
+
+    .img-logo{
+      margin-bottom: 4rem;
+    }
+}

@@ -9,9 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/medias.css">
   <title>Rachão do Migué</title>
 </head>
 <body>
+  
+  <input type="checkbox" role="button" aria-label="close-menu" name="close" id="close-menu" class="close-menu">
+  <label class="close-menu-label" for="close-menu" title="close-menu"></label>
     <aside class="menu white-bg">
       <div class=" menu-content">
       <h1>
@@ -20,7 +24,7 @@
         </a>
       </h1>
       <nav>
-        <ul>
+        <ul onclick="getElementById('close-menu').checked = false">
           <li><a href="#intro">Intro</a></li>
           <li><a href="#torneio">Torneio</a></li>
           <li><a href="#adm">Administração</a></li>
@@ -30,8 +34,8 @@
       </nav>
     </div>
     </aside>
-    <div id="intro" class="menu-spacing"></div>
-    <section class="intro main-bg2 section">
+    <div class="menu-spacing"></div>
+    <section id="intro" class="intro main-bg2 section">
       <div class="main-content intro-content">
         <div class="intro-text-content">
           <h2>rachão do migué forever</h2>
@@ -87,27 +91,26 @@
       </header>
       <div class="gallery-section">
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8806.jpg" alt="gallery-migue">
+          <img src="assets/img/t1.jpg" alt="gallery-migue">
         </div>
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8805.jpg" alt="gallery-migue">
+          <img src="assets/img/t2.jpg" alt="gallery-migue">
         </div>
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8824.jpg" alt="gallery-migue">
+          <img src="assets/img/t3.jpg" alt="gallery-migue">
         </div>
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8752.jpg" alt="gallery-migue">
+          <img src="assets/img/t4.jpg" alt="gallery-migue">
         </div>
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8776.jpg" alt="gallery-migue">
+          <img src="assets/img/t5.jpg" alt="gallery-migue">
         </div>
         <div class="gallery-img">
-          <img src="assets/img/TORNEIO DO MIGUE AGOSTO DE 2022/DSCN8779.jpg" alt="gallery-migue">
+          <img src="assets/img/t6.jpg" alt="gallery-migue">
         </div>
       </div>
     </div>
     </div>
-    <p class="obs">OBS:A qualidade da foto está ruim, pois se tudo estivesse bom não era rachão, e também porque não tenho autorização deles para postar foto</p>
     </section>
 
     <section id="contact" class="contact main-bg3 section">
@@ -117,12 +120,12 @@
           <p>O Rachão do Migué surgiu de um grupo de amigos de escola, ainda jovens adolescentes, onde o intuito era uma pelada semanal só para resenhar e brincar de bola. Com o tempo a peladinha foi aumentando e a resenha também, até que após dois anos de pelada, alguns fundadores tiveram a ideia de fazer uma competição interna carregando o lema e a tradição do rachão: o ENTRETENIMENTO!</p>
         </div>
         <div class="contact-img">
-          <img src="assets/img/logo.png" alt="header-logo">
+          <img src="assets/img/logo.png" alt="contact-logo">
         </div>
         <div class="contact-form">
           <fieldset class="form-field">
             <legend>Contato</legend>
-            <form action="#" method="POST">
+            <form action="contact.php" method="POST">
               <div class="form-grid">
                 <div class="form-group">
                   <label for="name">Nome</label>
@@ -153,7 +156,7 @@
 
     <footer class="footer">
       <div class="footer-content">
-      <p><a href="https://www.instagram.com/pedro.drtoliveira/">Ass:Pedro Oliveira</a> <span class="emoji">&#128204;</span></p>
+      <p><a href="https://www.instagram.com/pedro.drtoliveira/" rel="nofollow" target="_blank">Ass:Pedro Oliveira</a> <span class="emoji">&#128204;</span></p>
       <p>Copyright © 2023</p>
     </div>
     </footer>

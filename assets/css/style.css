@@ -31,7 +31,7 @@ nav ul{
 nav ul li a{
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   text-transform: uppercase;
   color: rgb(224, 22, 99);
   border-radius: 0.5rem;
@@ -42,7 +42,7 @@ nav ul li a{
   position: absolute;
   content: '';
   background: rgb(224, 22, 99);
-  bottom: 1rem;
+  bottom: -0.5rem;
   left: 50%;
   height: 0.2rem;
   width: 0;
@@ -179,10 +179,6 @@ article{
   text-transform: uppercase;
 }
 
-.obs{
-  color: rgb(129, 6, 53);
-  text-align: center;
-}
 .full-height{
   display: flex;
   flex-direction: column;
@@ -327,4 +323,8 @@ article{
   color: rgb(129, 6, 53);
   text-align: center;
   text-decoration: none;
-} 
+}
+
+.close-menu{
+  display: none;
+}
