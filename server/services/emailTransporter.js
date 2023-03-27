@@ -1,4 +1,9 @@
 const { createTransport } = require("nodemailer");
+const { config } = require("dotenv");
+
+config({
+  debug: true,
+});
 
 module.exports = {
   transporter: function () {
@@ -6,8 +11,8 @@ module.exports = {
       service: "gmail",
       secure: true,
       auth: {
-        user: "fm3209742@@gmail.com",
-        pass: "hsztnubbpqcjlyeq"
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
   },
