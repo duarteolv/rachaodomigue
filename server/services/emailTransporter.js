@@ -1,9 +1,7 @@
 const { createTransport } = require("nodemailer");
 const { config } = require("dotenv");
 
-config({
-  debug: true,
-});
+config();
 
 module.exports = {
   transporter: function () {
