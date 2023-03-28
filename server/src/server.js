@@ -5,6 +5,8 @@ const mailDataValidator = require("../services/validator");
 const { transporter } = require("../services/emailTransporter");
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.use(helmet());
 app.use(express.json());
 app.use(express.static(path.resolve("../assets")));
@@ -37,4 +39,4 @@ app.post("/contato", async function (req, res) {
   });
 });
 
-app.listen(3000, console.log("Server is listening at port " + 3000));
+app.listen(PORT, console.log("Server is listening at port " + PORT));
