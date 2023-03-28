@@ -5,35 +5,32 @@ const mailDataValidator = require("../services/validator");
 const { transporter } = require("../services/emailTransporter");
 const app = express();
 
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      useDefaults: true,
-      directives: {
-        "script-src": ["'self'", "https://cdn.jsdelivr.net"],
-      },
-    },
-  })
-);
-app.use(express.urlencoded({ extended: false }));
+app.use(helmet());
+app.use(express.json());
 app.use(express.static(path.resolve("../assets")));
 
-app.get("/", function (_, res) {
+app.get("/", (_, res) => {
   return res.sendFile(path.resolve("../index.html"));
 });
 
 app.post("/contato", async function (req, res) {
   const mailData = req.body;
   try {
-    await mailDataValidator.isValid(mailData);
-    await transporter().sendMail({
-      from: mailData.email,
-      to: "fm3209742@gmail.com",
-      subject: `${mailData.name} ${mailData.surname}`,
-      text: mailData.message,
-    });
+    if (await mailDataValidator.isValid(mailData)) {
+      await transporter().sendMail({
+        from: mailData.email,
+        to: process.env.EMAIL_USER,
+        subject: `${mailData.name} ${mailData.surname} <${mailData.email}>`,
+        text: mailData.message,
+      });
+    } else {
+      return res.status(400).json({
+        error: "verify fields",
+      });
+    }
   } catch (e) {
-    return res.json(e.errors);
+    console.log(e);
+    return res.status(500).json(e.message);
   }
   return res.json({
     success: true,
