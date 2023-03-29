@@ -6,7 +6,7 @@
     const menuItems = document.querySelectorAll("nav ul li");
 
     menuItems.forEach(function (item) {
-      item.addEventListener("click", function (e) {
+      item.addEventListener("click", function () {
         closeBtn.checked = false;
       });
     });
