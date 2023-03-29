@@ -2,6 +2,14 @@
   const CLOSE_BUTTON_MESSAGE = "Fechar";
   window.onload = function () {
     const form = document.querySelector("form.send-mail");
+    const closeBtn = document.querySelector(".close-menu");
+    const menuItems = document.querySelectorAll("nav ul li");
+
+    menuItems.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        closeBtn.checked = false;
+      });
+    });
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
